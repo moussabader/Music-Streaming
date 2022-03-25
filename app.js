@@ -3,11 +3,11 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const indexRouter = require('./Routes/index');
 const songsRouter = require('./Routes/song.route');
 const playlistRouter = require('./Routes/playlist.route');
-const bodyParser = require('body-parser');
-const methodOverride = require('method-override');
 
 //import database
 const mongoose = require('mongoose');
@@ -44,7 +44,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
