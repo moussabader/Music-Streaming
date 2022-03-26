@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const indexRouter = require('./Routes/index');
 const songsRouter = require('./Routes/song.route');
 const playlistRouter = require('./Routes/playlist.route');
+const adRouter = require('./Routes/ad.route');
 
 //import database
 const mongoose = require('mongoose');
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/songs', songsRouter);
 app.use('/playlists', playlistRouter);
+app.use('/ads', adRouter);
 
 //Mongo config
 const mongoURI = configDB.mongo.uri;

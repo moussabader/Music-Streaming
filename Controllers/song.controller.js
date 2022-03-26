@@ -1,6 +1,5 @@
 const Song = require("../models/Song");
 const mongoose = require("mongoose");
-const Playlist = require("../models/Playlist");
 
 // Init GridFS bucket
 const conn = mongoose.connection;
@@ -29,7 +28,7 @@ module.exports = {
     deleteSong : async (req, res) => {
         const song = await Song.findById({_id: req.params.id});
         if (!song) {
-            res.status(404).json({
+            return res.status(404).json({
                 Message: 'Song not found'
             })
         }
@@ -48,7 +47,7 @@ module.exports = {
         const songs = await Song.find();
         if (songs.length === 0) {
             return res.status(200).json({
-                success: false,
+                success: true,
                 message: 'No Songs available'
             });
         }
@@ -127,7 +126,7 @@ module.exports = {
     getOneSong : async (req, res) => {
         const song = await Song.findById(req.params.id)
         if (!song) {
-            return res.status(200).json({
+            return res.status(404).json({
                 success: false,
                 message: 'Song Not Found'
             });

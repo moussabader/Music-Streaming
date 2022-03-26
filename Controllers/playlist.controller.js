@@ -1,6 +1,5 @@
 const Playlist = require("../models/Playlist");
 const Song = require("../models/Song");
-const mongoose = require("mongoose");
 
 module.exports = {
     create: async (req, res) => {
@@ -47,6 +46,12 @@ module.exports = {
     },
     getAll: async (req, res) => {
         const playlists = await Playlist.find();
+        if (playlists.length === 0) {
+            return res.status(200).json({
+                success: true,
+                message: 'No Playlists available'
+            });
+        }
         res.status(200).json({
             success: true,
             PlaylistsFound: playlists.length,

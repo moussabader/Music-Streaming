@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require("mongoose");
 const Song = require('../models/Song');
-const upload = require('../Controllers/GridFs');
+const upload = require('../Controllers/SongStorage');
 
 // Init GridFS bucket
 const conn = mongoose.connection;

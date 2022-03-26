@@ -7,12 +7,12 @@ const storage = new GridFsStorage({
     file: (req, file) => {
         return new Promise((resolve, reject) => {
             let fileInfo;
-            if (file.mimetype === "audio/mpeg"){
+            if (file.originalname.split('.')[1].length === 3 ){
                  fileInfo = {
                     filename: file.originalname.slice(0, -4),
                     bucketName: 'uploads',
                 };
-            }else if (file.mimetype === "image/jpeg"){
+            }else if (file.originalname.split('.')[1].length === 4){
                  fileInfo = {
                     filename: file.originalname.slice(0, -5),
                     bucketName: 'uploads',
