@@ -147,5 +147,39 @@ module.exports = {
         const song = await Song.findById(req.params.id)
         const imageId = new mongoose.Types.ObjectId(song.image);
         bucket.openDownloadStream(imageId).pipe(res);
+    },
+    likeSong: async (req, res) => {
+        const song = await Song.findById(req.params.id);
+        if (!song) {
+            return res.status(404).json({
+                success: false,
+                message: 'Song Not Found'
+            });
+        }
+        song.nbrLikes += 1;
+        await song.save();
+        res.status(200).json({
+            success: true,
+            message: 'like added',
+            Song: song.title,
+            Likes: song.nbrLikes
+        });
+    },
+    dislikeSong: async (req, res) => {
+        const song = await Song.findById(req.params.id);
+        if (!song) {
+            return res.status(404).json({
+                success: false,
+                message: 'Song Not Found'
+            });
+        }
+        song.nbrLikes -= 1;
+        await song.save();
+        res.status(200).json({
+            success: true,
+            message: 'dislike added',
+            Song: song.title,
+            Likes: song.nbrLikes
+        });
     }
 }

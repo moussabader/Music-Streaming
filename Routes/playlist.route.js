@@ -10,5 +10,7 @@ router.put('/remove-song/:playlistId',PlaylistController.removeSong);
 router.get('/get-all',PlaylistController.getAll);
 router.get('/get/:id',PlaylistController.getOne);
 router.get('/get-songs/:playlistId',PlaylistController.getPlaylistSongs);
+router.put('/like-playlist/:playlistId',PlaylistController.likePlaylist);
+router.put('/dislike-playlist/:playlistId',PlaylistController.dislikePlaylist);
 
 module.exports = router;

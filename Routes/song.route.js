@@ -35,6 +35,8 @@ router.get('/get-file/:filename',SongController.getFileByName);
 router.get('/get-song/:id',SongController.getOneSong);
 router.get('/get-track/:id',SongController.getSongTrack);
 router.get('/get-image/:id',SongController.getSongImage);
+router.put('/like-song/:id',SongController.likeSong);
+router.put('/dislike-song/:id',SongController.dislikeSong);
 
 
 module.exports = router;

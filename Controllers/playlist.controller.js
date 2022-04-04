@@ -151,5 +151,39 @@ module.exports = {
             SongsFound: songs.length,
             PlaylistSongs: songs
         });
+    },
+    likePlaylist: async (req, res) => {
+        const playlist = await Playlist.findById(req.params.playlistId);
+        if (!playlist) {
+            return res.status(404).json({
+                success: false,
+                message: 'Playlist Not Found'
+            });
+        }
+        playlist.nbrLikes += 1;
+        await playlist.save();
+        res.status(200).json({
+            success: true,
+            message: 'like added',
+            Playlist: playlist.title,
+            Likes: playlist.nbrLikes
+        });
+    },
+    dislikePlaylist: async (req, res) => {
+        const playlist = await Playlist.findById(req.params.playlistId);
+        if (!playlist) {
+            return res.status(404).json({
+                success: false,
+                message: 'Playlist Not Found'
+            });
+        }
+        playlist.nbrLikes -= 1;
+        await playlist.save();
+        res.status(200).json({
+            success: true,
+            message: 'dislike added',
+            Playlist: playlist.title,
+            Likes: playlist.nbrLikes
+        });
     }
 }
