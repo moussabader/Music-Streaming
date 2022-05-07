@@ -1,0 +1,108 @@
+#Test post requests with postman (form-data)
+###
+###
+#MySongs Requests
+###
+###
+POST http://localhost:3002/songs/post/
+###
+PUT http://localhost:3002/songs/update/6225251a7953bf50bd55d8b8
+Content-Type: application/json
+
+{
+  "title" : "camel2"
+}
+###
+DELETE http://localhost:3002/songs/delete/623e83a6b9f288340d3dc2e2
+###
+GET http://localhost:3002/songs/get-songs
+###
+GET http://localhost:3002/songs/get-files
+###
+GET http://localhost:3002/songs/get-tracks
+#Song by name
+###
+GET http://localhost:3002/songs/get-songs/c
+#File by name
+###
+GET http://localhost:3002/songs/get-file/Bad Guy
+###
+GET http://localhost:3002/songs/get-song/623d1a012dfd7400d042de6d
+###
+GET http://localhost:3002/songs/get-track/623d1a012dfd7400d042de6d
+###
+GET http://localhost:3002/songs/get-image/623d1a012dfd7400d042de6d
+###
+PUT http://localhost:3002/songs/like-song/623e815d2d577bd2976950c9
+###
+PUT http://localhost:3002/songs/dislike-song/623e815d2d577bd2976950c9
+###
+###
+#Playlist Requests
+###
+###
+POST http://localhost:3002/playlists/post
+###
+PUT http://localhost:3002/playlists/update/623d34bea9ddf92b89ad07d9
+Content-Type: application/json
+
+{
+  "title": "Playlist 1",
+  "scope": "PUBLIC"
+}
+###
+DELETE http://localhost:3002/playlists/delete/623d35c5a9ddf92b89ad07e6
+###
+PUT http://localhost:3002/playlists/add-song/623d35c5a9ddf92b89ad07e6
+Content-Type: application/json
+
+{
+  "songId": "623d1a012dfd7400d042de6d"
+}
+###
+PUT http://localhost:3002/playlists/remove-song/623d34bea9ddf92b89ad07d9
+Content-Type: application/json
+
+{
+  "songId": "623d1a012dfd7400d042de6d"
+}
+###
+GET http://localhost:3002/playlists/get-all
+###
+GET http://localhost:3002/playlists/get/623d34bea9ddf92b89ad07d9
+###
+GET http://localhost:3002/playlists/get-songs/623d34bea9ddf92b89ad07d9
+###
+PUT http://localhost:3002/playlists/like-playlist/624b25f6775082922889f4f2
+###
+PUT http://localhost:3002/playlists/dislike-playlist/624b25f6775082922889f4f2
+###
+###
+#Ads Requests
+###
+###
+POST http://localhost:3002/ads/post
+###
+PUT http://localhost:3002/ads/update/623e8a509009d170185b2c7b
+Content-Type: application/json
+
+{
+  "name": "Best Fiends Ad"
+}
+###
+DELETE http://localhost:3002/ads/delete/623e8ffed983247bead0742e
+###
+GET http://localhost:3002/ads/get-all
+###
+GET http://localhost:3002/ads/get-ad/623e8a509009d170185b2c7b
+###
+GET http://localhost:3002/ads/get-audio/623e8a509009d170185b2c7b
+###
+GET http://localhost:3002/ads/get-image/623e8a509009d170185b2c7b
+
+###
+GET http://localhost:3005/search/getmusic
+
+###
+GET http://localhost:3005/scrap/getmusic/till i collapse
+

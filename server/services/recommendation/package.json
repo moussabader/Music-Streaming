@@ -1,0 +1,33 @@
+{
+  "name": "recommendation",
+  "version": "1.0.0",
+  "description": "Full Authentication and Authorization system with nodejs mongodb express using access and refresh token",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rauschma/stringio": "^1.4.0",
+    "cron": "^1.8.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
+    "faker": "^5.5.3",
+    "flask": "^0.2.10",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "joi": "^17.6.0",
+    "mongoose": "^6.2.8",
+    "morgan": "^1.10.0",
+    "node-cron": "^3.0.0",
+    "nodemon": "^2.0.15",
+    "numpy": "^0.0.1",
+    "pandas": "^0.0.3",
+    "python-shell": "^3.0.1",
+    "request-promise": "^4.2.6",
+    "sys": "^0.0.1",
+    "xlsx": "^0.18.5"
+  }
+}

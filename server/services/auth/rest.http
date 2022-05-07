@@ -1,0 +1,57 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyMjVkYzUyMDM3YmJiYjI1YzQ2NjU1NSIsImlhdCI6MTY0NjY0ODQ0NSwiZXhwIjoxNjQ2NzM0ODQ1LCJpc3MiOiJCZWF0enouY29tIn0.tZHeIm5Q2OsVIyTbsR51uvgT58RRPo7JqLD4_xD9UYs
+
+
+###
+GET http://localhost:3000/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyMjVkYzUyMDM3YmJiYjI1YzQ2NjU1NSIsImlhdCI6MTY0NjY0ODQ0NSwiZXhwIjoxNjQ2NzM0ODQ1LCJpc3MiOiJCZWF0enouY29tIn0.tZHeIm5Q2OsVIyTbsR51uvgT58RRPo7JqLD4_xD9UYs
+
+
+###
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+    
+    "email":"bzbzbzbz@google.com",
+    "password": "password"
+} 
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username":"bzbzb",
+    "email":"bzbzbzbz@google.com",
+    "password": "password"
+}
+
+###
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyMjRiMmViNWJiMzVjNjlmN2RlODZjNyI
+    sImlhdCI6MTY0NjU3Mjc0MiwiZXhwIjoxNjc4MTMwMzQyLCJpc3MiOiJCZWF0enouY29tIn0.raOfamUjZrrAQ70Y1MTxmHCNWgpYnPZShaklZ0UslQw"
+}
+
+
+###
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyMjRiMmViNWJiMzVjNjlmN2RlODZjNyIsImlhdCI6MTY0Nj
+    U3Mjc0MiwiZXhwIjoxNjc4MTMwMzQyLCJpc3MiOiJCZWF0enouY29tIn0.raOfamUjZrrAQ70Y1MTxmHCNWgpYnPZShaklZ0UslQw"
+
+}
+
+###
+GET http://localhost:3000/auth/getIdFromAccessToken
+Content-Type: application/json
+
+{
+    "accessToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyNGM1ZmNlZmU1ZjE2ODY0ODZiZjZiMSIsImlhdCI6MTY0OTE3MjQzMCwiZXhwIjoxNjQ5MjU4ODMwLCJpc3MiOiJCZWF0enouY29tIn0.7hXcZXjtwThs8YfZgpEFyFqlabLX5U8n2sGvUkO5_Fg"
+
+}

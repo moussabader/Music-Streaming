@@ -1,0 +1,36 @@
+GET http://localhost:3000/api/user/getAll
+
+
+###
+GET http://localhost:3000/api/user/getOne/6225e37852ecca2ac85da8d7
+
+
+###
+DELETE http://localhost:3000/api/user/deleteUser/622758db4e27ff376d9a5cbe
+
+
+
+###
+PATCH http://localhost:3000/api/user/update/6225dfa772813a0b7bff2fa5
+Content-Type: application/json
+
+{
+    "email" : "yassine30eee@gmail.com",
+    "profile":{
+        "firstName":"yassinesss",
+        "lastName":"trabelsi",
+        "birthday":"2010-03-03"
+    }
+} 
+
+
+###
+PUT http://localhost:3000/api/user/follow/6225dfa772813a0b7bff2fa5/622757b14e27ff376d9a5cba
+
+
+###
+PUT http://localhost:3000/api/user/unfollow/622758db4e27ff376d9a5cbe/6225dfa772813a0b7bff2fa5
+
+
+###
+GET http://localhost:3000/api/user/followers/6225e37852ecca2ac85da8d7

@@ -1,0 +1,5 @@
+{
+    "mongo":{
+        "uri":"mongodb+srv://memoryMern:megaman500@realmcluster.xqs34.mongodb.net/memoryMern?retryWrites=true&w=majority"
+    }
+}

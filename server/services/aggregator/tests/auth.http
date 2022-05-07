@@ -1,0 +1,56 @@
+GET http://localhost:3001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyMjVkYzUyMDM3YmJiYjI1YzQ2NjU1NSIsImlhdCI6MTY0NjY0ODQ0NSwiZXhwIjoxNjQ2NzM0ODQ1LCJpc3MiOiJCZWF0enouY29tIn0.tZHeIm5Q2OsVIyTbsR51uvgT58RRPo7JqLD4_xD9UYs
+
+
+###
+GET http://localhost:3001/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyMjVkYzUyMDM3YmJiYjI1YzQ2NjU1NSIsImlhdCI6MTY0NjY0ODQ0NSwiZXhwIjoxNjQ2NzM0ODQ1LCJpc3MiOiJCZWF0enouY29tIn0.tZHeIm5Q2OsVIyTbsR51uvgT58RRPo7JqLD4_xD9UYs
+
+
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"yassine11",
+    "email":"yassine1001@gmail.com",
+    "password": "password"
+} 
+
+###
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+    "username":"yassine11",
+    "email":"yassine1001@gmail.com",
+    "password": "password"
+} 
+###
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"yassine11",
+    "email":"yassine1001@gmail.com",
+    "password": "password"
+}
+
+###
+POST http://localhost:3001/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyNGM1NjlhN2NhYmI5ZWIyOGM1YTc0MyIsImlhdCI6MTY0OTE3MDEzMCwiZXhwIjoxNjgwNzI3NzMwLCJpc3MiOiJCZWF0enouY29tIn0.yfYG-p5h8eU83SShfp-9OZkPEJ7CfXhTi93PtPxMUlw"
+    }
+
+
+###
+DELETE http://localhost:3001/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWRpZW5jZSI6IjYyMjRiMmViNWJiMzVjNjlmN2RlODZjNyIsImlhdCI6MTY0Nj
+    U3Mjc0MiwiZXhwIjoxNjc4MTMwMzQyLCJpc3MiOiJCZWF0enouY29tIn0.raOfamUjZrrAQ70Y1MTxmHCNWgpYnPZShaklZ0UslQw"
+
+}

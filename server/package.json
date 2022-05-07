@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-auth": "(cd services/auth) & (nodemon index.js)",
+    "dev-user": "(cd services/user) & (nodemon index.js)",
+    "dev-streaming": "(cd services/streaming) & (nodemon index.js)",
+    "dev": "npm run dev-auth & npm run dev-user & npm run dev-streaming",
+    "start": "nodemon db.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.3",
+    "nodemon": "^2.0.15"
+  }
+}
