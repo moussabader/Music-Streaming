@@ -7,6 +7,7 @@ import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import QueueMusicIcon from '@mui/icons-material/QueueMusic';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import ManageSearchOutlinedIcon from '@mui/icons-material/ManageSearchOutlined';
 import logo from "../../images/beatzz.png";
 import likeImg from "../../images/like.jpg";
 import styles from "./styles.module.scss";
@@ -51,6 +52,14 @@ const Sidebar = () => {
             >
                 <SearchIcon/>
                 <span>Search</span>
+            </NavLink>
+            <NavLink
+                to="/search-lyrics"
+                className={styles.menu_link}
+                activeClassName={styles.active_menu}
+            >
+                <ManageSearchOutlinedIcon/>
+                <span>Search Lyrics</span>
             </NavLink>
             <NavLink
                 to="/collection/tracks"

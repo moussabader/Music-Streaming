@@ -160,7 +160,7 @@ const AudioPlayer = () => {
 					{/*/>*/}
 					{/*<p>4.00</p>*/}
 					<div>
-						<audio autoPlay id='audio' src={songTrack}  controls style={{height: '30px'}}/>
+						<audio autoPlay id='audio' src={songTrack}  controls style={{height: '30px', display: "none"}}/>
 					</div>
 				</div>
 			</div>

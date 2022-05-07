@@ -20,6 +20,7 @@ import Navbar from "./components/Navbar";
 import AudioPlayer from "./components/AudioPlayer";
 import Playlist from "./pages/Playlist";
 import Search from "./pages/Search";
+import SearchLyrics from "./pages/SearchLyrics";
 import LikedSongs from "./pages/LikedSongs";
 import Profile from "./pages/Profile";
 import UploadSong from "./pages/UploadSong";
@@ -109,6 +110,7 @@ const App = () => {
 					component={Library}
 				/>
 				<PrivateRoute exact user={user} path="/search" component={Search} />
+				<PrivateRoute exact user={user} path="/search-lyrics" component={SearchLyrics} />
 				<PrivateRoute exact user={user} path="/payment" component={payment} />
 				<PrivateRoute
 					exact

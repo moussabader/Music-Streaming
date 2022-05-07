@@ -1,0 +1,8 @@
+GET http://localhost:3002/scrap/getmusic/i till
+
+###
+
+GET http://localhost:3002/search/getmusic/
+###
+
+http://localhost:3002/scrap/hello
