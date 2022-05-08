@@ -43,7 +43,7 @@
 // 	{ _id: 7, img: peaches, name: "Peaches", artist: "Justin Bieber" },
 // ];
 
-// const Home = () => {
+// const HomeGame = () => {
 // 	return (
 // 		<Fragment>
 // 		<ChatApp
@@ -54,4 +54,4 @@
 // 	);
 // };
 
-// export default Home;
+// export default HomeGame;

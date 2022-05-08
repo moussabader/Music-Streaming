@@ -1,0 +1,66 @@
+import React from "react"
+import "./SongGame.css"
+
+function Option({
+  song,
+  answeredCorrect,
+  answeredIncorrect,
+  isAnswered,
+  selectedOption,
+}) {
+  const answeredState = () => {
+    if (isAnswered) {
+      if (song.correct) {
+        return "correct"
+      }
+      if (song.song == selectedOption) {
+        return "incorrect"
+      } else {
+        return "disabled"
+      }
+    }
+  }
+
+  return (
+    <button
+      onClick={() => {
+        song.correct ? answeredCorrect(song.song) : answeredIncorrect(song.song)
+      }}
+      className={`option ${answeredState()}`}
+      disabled={isAnswered}
+      style={{height: "40px", color:'#390F9AFF', fontSize: '17px'}}
+    >
+      {song.song}
+      {isAnswered && (
+        <div class="optionIcon">
+          <svg
+            className="cross"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="rgba(135,8,37,0.96)"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <svg
+            className="tick"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="rgba(34,144,5,0.82)"
+          >
+            <path
+              fillRule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </div>
+      )}
+    </button>
+  )
+}
+
+export default Option

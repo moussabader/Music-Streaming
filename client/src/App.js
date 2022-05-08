@@ -1,5 +1,5 @@
 
-import { Fragment, useEffect, useRef } from "react";
+import {Fragment, useContext, useEffect, useRef} from "react";
 import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getUser } from "./redux/userSlice/apiCalls";
@@ -27,11 +27,17 @@ import UploadSong from "./pages/UploadSong";
 import AddPlaylist from "./pages/AddPlaylist";
 import payment from "./pages/Payment";
 import SongLyrics from "./pages/SongLyrics";
+import HomeGame from "./pages/HomeGame"
+import Quiz from "./pages/Quizz"
+import Over from "./pages/Over"
+import {Context} from "./Context";
+
 
 const App = () => {
 	require('dotenv').config();
 	const dispatch = useDispatch();
 	const location = useLocation();
+
 	// const { user } = useSelector((state) => state.auth);
 	let { user } = useSelector((state) => state.auth);
 	user = true;
@@ -154,12 +160,31 @@ const App = () => {
 					path="/songs/lyrics/:id"
 					component={SongLyrics}
 				/>
+					<PrivateRoute
+						exact
+						user={user}
+						path="/game"
+						component={HomeGame}
+					/>
+
+					<PrivateRoute
+					exact
+					user={user}
+					path="/game/quizz"
+					component={Quiz}
+				/>
+					<PrivateRoute
+					exact
+					user={user}
+					path="/game/over"
+					component={Over}
+				/>
 				{user && <Redirect from="/signup" to="/home" />}
 				{user && <Redirect from="/login" to="/home" />}
 				<Route path="/signup" component={SignUp} />
 				<Route path="/login" component={Login} />
 				<Route path="/not-found" component={NotFound} />
-				<Redirect to="/not-found" />
+				{/*<Redirect to="/not-found" />*/}
 			</Switch>
 		</Fragment>
 	);

@@ -14,6 +14,7 @@ import {loadStripe} from '@stripe/stripe-js';
 import App from "./App";
 import "react-toastify/dist/ReactToastify.css";
 import "./global.css";
+import {ContextProvider} from "./Context";
 
 let persistor = persistStore(store);
 const stripePromise = loadStripe('pk_test_51KgThuIS9fITYSqfUY9jiZP3UyI3LhdmgHVwzH6HGNccVeKaOS1LLagESy84ELkwOAZUx5P0B2apqjWa2KCt94t200ghwBRamm');
@@ -21,6 +22,7 @@ const stripePromise = loadStripe('pk_test_51KgThuIS9fITYSqfUY9jiZP3UyI3LhdmgHVwz
 ReactDOM.render(
 	<Elements stripe={stripePromise}>
 		<React.StrictMode>
+			<ContextProvider>
 			<PlayerContextProvider>
 			<Provider store={store}>
 				<PersistGate persistor={persistor}>
@@ -38,6 +40,7 @@ ReactDOM.render(
 				</PersistGate>
 			</Provider>
 			</PlayerContextProvider>
+			</ContextProvider>
 		</React.StrictMode>
 	</Elements>,
 	document.getElementById("root")
