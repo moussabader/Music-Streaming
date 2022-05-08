@@ -27,7 +27,7 @@ function AlbumCard({ album }) {
       </div>
     </button>
           <div className="album--info" style={{fontSize:'7px', textAlign:"center"}}>
-              <h3 className="album--title" >{album.name}</h3>
+              <h3 className="album--title" style={{color: 'rgb(62, 8, 120)', fontSize:'1.8em' }}>{album.name}</h3>
           </div>
       </Link>
   )

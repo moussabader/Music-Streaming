@@ -2,48 +2,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,400&family=Poppins:wght@600&display=swap");
 /* Colors from Chakra UI */
 :root {
-  --purple-50: #faf5ff;
-  --purple-100: #e9d8fd;
-  --purple-200: #d6bcfa;
-  --purple-300: #b794f4;
-  --purple-400: #9f7aea;
-  --purple-500: #805ad5;
-  --purple-600: #6b46c1;
-  --purple-700: #553c9a;
-  --purple-800: #44337a;
-  --purple-900: #322659;
-  --green: #2c7a7b;
-  --green-shadow: #b2f5ea;
-  --red: #c53030;
-  --red-shadow: #fed7d7;
+  /*--purple-50: #faf5ff;*/
+  /*--purple-100: #e9d8fd;*/
+  /*--purple-200: #d6bcfa;*/
+  /*--purple-300: #b794f4;*/
+  /*--purple-400: #9f7aea;*/
+  /*--purple-500: #805ad5;*/
+  /*--purple-600: #6b46c1;*/
+  /*--purple-700: #553c9a;*/
+  /*--purple-800: #44337a;*/
+  /*--purple-900: #322659;*/
+  /*--green: #2c7a7b;*/
+  /*--green-shadow: #b2f5ea;*/
+  /*--red: #c53030;*/
+  /*--red-shadow: #fed7d7;*/
+    --purple-50: #faf5ff;
+    --purple-100: #e9d8fd;
+    --purple-200: #d6bcfa;
+    --purple-300: #b794f4;
+    --purple-400: #9f7aea;
+    --purple-500: rgb(62, 8, 120);
+    --purple-600: #6b46c1;
+    --purple-700: #af1a3c;
+    --purple-800: #ad1a3b;
+    --purple-900: #322659;
+    --green: #2c7a7b;
+    --green-shadow: #b2f5ea;
+    --red: #c53030;
+    --red-shadow: #fed7d7;
 }
 
-body {
-  background-color: var(--purple-50);
-  font-family: "Poppins", sans-serif;
-}
+/*body {*/
+/*  background-color: var(--purple-50);*/
+/*  font-family: "Poppins", sans-serif;*/
+/*}*/
 
 /* Headings */
-h1,
-h2 {
-  font-family: "Merriweather", serif;
-}
+/*h1,*/
+/*h2 {*/
+/*  font-family: "Merriweather", serif;*/
+/*}*/
 
-h1 {
-  font-size: 2em;
-  color: var(--purple-700);
-}
+/*h1 {*/
+/*  font-size: 2em;*/
+/*  color: var(--purple-700);*/
+/*}*/
 
-h2 {
-  font-size: 1.4em;
-  color: var(--purple-500);
-}
+/*h2 {*/
+/*  font-size: 1.4em;*/
+/*  color: var(--purple-500);*/
+/*}*/
 
-h3 {
-  font-size: 1em;
-  font-weight: 600;
-  color: var(--purple-800);
-}
+/*h3 {*/
+/*  font-size: 1em;*/
+/*  font-weight: 600;*/
+/*  color: var(--purple-800);*/
+/*}*/
 
 button {
   cursor: pointer;

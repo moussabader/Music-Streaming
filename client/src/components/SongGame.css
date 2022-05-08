@@ -32,36 +32,36 @@
     --red-shadow: #fed7d7;
 }
 
-body {
-  background-color: var(--purple-50);
-  font-family: "Poppins", sans-serif;
-}
+/*body {*/
+/*  background-color: var(--purple-50);*/
+/*  font-family: "Poppins", sans-serif;*/
+/*}*/
 
 /* Headings */
-h1,
-h2 {
-  font-family: "Merriweather", serif;
-}
+/*h1,*/
+/*h2 {*/
+/*  font-family: "Merriweather", serif;*/
+/*}*/
 
-h1 {
-  font-size: 3em;
-  color: var(--purple-700);
-  /*color: #077786;*/
-}
+/*h1 {*/
+/*  font-size: 3em;*/
+/*  color: var(--purple-700);*/
+/*  !*color: #077786;*!*/
+/*}*/
 
-h2 {
-  font-size: 2.4em;
-    /*color: #077786;*/
-    color: var(--purple-500);
-}
+/*h2 {*/
+/*  font-size: 2.4em;*/
+/*    !*color: #077786;*!*/
+/*    color: var(--purple-500);*/
+/*}*/
 
-h3 {
-  font-size: 2em;
-  font-weight: 600;
-  color: var(--purple-800);
-    /*color: #077786;*/
+/*h3 {*/
+/*  font-size: 2em;*/
+/*  font-weight: 600;*/
+/*  color: var(--purple-800);*/
+/*    !*color: #077786;*!*/
 
-}
+/*}*/
 
 button {
   cursor: pointer;

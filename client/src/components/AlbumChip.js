@@ -16,7 +16,7 @@ function AlbumChip() {
         width="100px"
         height="100px"
       />
-      <h3 className="album--title" style={{fontSize:'30px', fontFamily:"cursive"}}>{selectedAlbum.name}</h3>
+      <h3 className="album--title" style={{fontSize:'30px', fontFamily:"cursive",color: '#af1a3c'}}>{selectedAlbum.name}</h3>
     </div>
   )
 }

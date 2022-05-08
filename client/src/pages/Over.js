@@ -21,8 +21,8 @@ function Over() {
         <header>
           <AlbumChip />
         </header>
-        <h1>{congratsText()}</h1>
-        <h2>
+        <h1 style={{color: '#af1a3c', fontSize:'3em' }}>{congratsText()}</h1>
+        <h2 style={{color: 'rgb(62, 8, 120)', fontSize:'2.4em' }}>
           You guessed{" "}
           <mark>
             {correctCount} / {ROUNDS}

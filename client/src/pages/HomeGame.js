@@ -23,14 +23,13 @@ function HomeGame() {
   return (
     <div className="home main-container" style={{background:"#3eaba1", marginTop:'30px', borderRadius:'25px', }}>
       <header>
-        <h1>
+        <h1 style={{color: '#af1a3c', fontSize:'3em' }}>
           How well do you know <br />
           <mark>{ARTIST}</mark>’s songs?
         </h1>
-        <h2>Let's find out!</h2>
+        <h2 style={{color: '#ad1a3b', fontSize:'2.4em' }}>Let's find out!</h2>
       </header>
-      <main>
-        <h3>Choose your favorite album</h3>
+        <h3 style={{color: 'rgb(62, 8, 120)', fontSize:'1.8em' }}>Choose your favorite album</h3>
         <div className="albums-list">
           {isAlbumsLoading ? (
             <Loader />
@@ -40,7 +39,6 @@ function HomeGame() {
               .map((item) => <AlbumCard key={item.name} album={item} />)
           )}
         </div>
-      </main>
     </div>
   )
 }
